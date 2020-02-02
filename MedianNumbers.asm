@@ -6,9 +6,10 @@
 
 	# TODO: Complete these declarations / initializations
 
-	.asciiz "Enter the next number:\n"
+	numrequest: .asciiz "Enter the next number:\n"
 
-	.asciiz "Median: "
+	median: .asciiz "Median: "
+
 
 
 #Text Area (i.e. instructions)
@@ -37,7 +38,7 @@ main:
   la $a0, numrequest
   syscall
 
-  li $v0,5
+  li $v0, 5
   syscall
   move $t2, $v0
 

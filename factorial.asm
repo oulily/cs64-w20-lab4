@@ -14,6 +14,10 @@
 .data
 
 	# TODO: Write your initializations here
+  userprompt: .asciiz "Enter a number:\n"
+  factorialof: .asciiz "Factorial of "
+  is: .asciiz "is:\n"
+  newline: .asciiz "\n"
 
 #Text Area (i.e. instructions)
 .text
