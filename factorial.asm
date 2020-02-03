@@ -32,6 +32,8 @@ main:
   syscall
 
   move $t0, $v0
+	beq $t0, $zero, zero
+
   addi $t3, $t0, 1
   #running product
   li $t1, 1
@@ -44,6 +46,11 @@ loop:
   mflo $t1
   addi $t2, $t2, 1
   j loop
+
+zero:
+	li $t4, 1
+	move $t1, $t4
+	j exit
 
 exit:
 	# TODO: Write code to properly exit a SPIM simulation
